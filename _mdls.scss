@@ -1,0 +1,71 @@
+
+
+// =============================================reset
+//  @include reset();
+@mixin reset {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+// ======================================== function display flex
+// @include disp-flex( , , );
+@mixin disp-flex($justyfy: auto, $align: auto, $direct: row, ) {
+    display: flex;
+    flex-direction: $direct;
+    justify-content: $justyfy;
+    align-items: $align;
+}
+// ============================================== color linear gradient
+// @include linegrad( , );
+@mixin linegrad($p1: blue, $p2:black) {
+    background-image: linear-gradient(to right, $p1, $p2);
+}
+
+// ================================================= width & height
+// @include w-h(100%,20px);
+@mixin w-h ($w, $h){
+    width: $w;
+    height: $h;
+}
+
+// ==================================================== font
+// @include font(Arial,1em,black);
+@mixin font($family:Arial, $size:1rem , $color:black) {
+    font-family: $family;
+    font-size: $size;
+    color: $color;
+}
+
+
+// ==============================================grid container
+// @include gridC($cr:12, $cf:1fr, $rm:100px, $gg:5px);
+@mixin gridC($cr:12, $cf:1fr, $rm:100px, $gg:5px) {
+    display: grid;
+    grid-template-columns: repeat($cr, $cf);
+    grid-auto-rows: minmax($rm,auto);
+    grid-gap: $gg;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ==============================================bg color
+// @include mdls.bg-c( , );
+// @mixin bg-c($p1: blue) {
+//     background-color: $p1;
+// }
